@@ -1,16 +1,24 @@
-### Hi there 👋
 
-<!--
-**v4ms/v4ms** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=v4ms&label=Profile%20views&color=f5c2ec&style=flat" alt="v4ms" />
+</p>
 
-Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```assembly
+section .data
+    message db 'on foenem', 0
+
+section .text
+    global _start
+
+_start:
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, message
+    mov edx, 9
+    int 0x80
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+```
